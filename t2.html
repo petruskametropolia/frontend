@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tehtava2</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>  
+    .split {
+         height: 100%;
+         width: 50%;
+         position: fixed;
+         top: 0;
+      }
+      .left {
+         left: 0;
+         background-color: white;
+      }
+      .right {
+         right: 0;
+         background-color: lightgrey;
+      }
+      .boxer  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 5px grey;
+        }
+        .boxer:hover{box-shadow: 20px 20px 10px black;}
+
+        .teksti {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+        }
+        .button{
+            border-radius: 50%;
+            display: block;
+            margin:auto;
+        }
+        .input{
+            display: block;
+            margin: auto;
+        }
+        @media only screen and (min-width: 1200px) {
+    .left{
+        background-color: red;
+    }
+    .boxer{
+        box-shadow: 10px 10px 5px darkgreen;
+  }
+ }
+
+ #mini{
+            width: 70px;
+            height: 70px;
+            background-color: blue;
+            right: 10px;
+            position: fixed;
+            right: 0;
+            top: 40%;
+        }
+        #mini2{
+            width: 100px;
+            height: 40px;
+            background-color: whitesmoke;
+            position: absolute;
+            left: 50%;
+            top: 97%;
+            transform: translate(-50%, -50%);
+           
+        }
+        #mini2:hover{opacity: 0.5;
+            background-color: aqua;
+
+        }
+     </style>
+    </head>
+
+<body>
+    <div class="split left">
+        <img class = "boxer" src="addfront.png" alt="">
+    </div>
+    <div class="split right">
+        <h1 class = teksti>Media Sharing App</h1>
+        <ol>
+            <li><p class = "teksti">Please create a page with two sections. One for the ad, and another for a form. Place these side by side.</p></li>
+            <li><p class="teksti">Create and style a "for sale" card as seen on the left</p></li>
+            <div id ="mini"> </div>
+            <li><form action="text">
+                <input class = "input" type = "text" placeholder="Make one input field" id = "name" name="name"><br></form></li>
+            <li><button class = "button" type="button">Button</button></li>
+            <li><p class="teksti">Text</p></li>
+          </ol>
+    </div>
+    <div id ="mini2"> See more dogs </div>
+</body>
+</html>
