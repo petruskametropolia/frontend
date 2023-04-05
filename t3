@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Positioning Items</title>
+    <meta name ="viewport", content = "widht=device-width",initial-scale=1.0 >
+	<meta charset="UTF-8">
+	<style>  
+         
+        /*////////////////////
+        // Positioning items    
+        //////////////////////
+        
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+        
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+    
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+        
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+        
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+          
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+        
+        */
+        
+            html { 
+            background: url(saturn1.jpg) no-repeat center center fixed; 
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+    
+        .box {
+            
+            border: 1px solid black;
+            
+        }
+        
+        #left { background-color: grey;
+       flex: 1;
+       display: flex;
+       justify-content: center;
+       align-items:flex-start';
+
+        }
+        #right { 
+      flex: 3;     
+      display: flex; 
+      flex-direction: column;
+      background-color: white;
+     
+     }
+    
+      
+        .clear { clear: both;}
+    
+        /* img */
+        img {
+        }
+        
+        /* container */
+        .container {  
+            display: flex;
+           
+          /*background-color: white;*/
+           height: 80vh;
+           position: relative;
+          gap: 20px;
+          
+           
+
+        }
+        
+        /* relative and absolute positioning with blue */      
+        #blue {
+        }
+       
+        .upper{
+            background-color: blueviolet;
+           /* flex-shrink: 0;*/
+            flex: 1;
+            display: flex;
+            
+          /*  justify-content: center;
+            align-items: center;*/
+
+        }
+        .lower{
+            background-color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+           
+            
+            
+        }
+        .kuva{
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper{
+       max-width: 800px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: white;
+        padding: 20px;
+        }
+        header{
+            background-color: white;
+            
+        }
+        .topnav a {
+  color: black;
+ 
+  
+          
+  text-decoration: none;
+
+}
+.topnav{
+    display: flex;
+  justify-content:space-between;
+}
+        footer{
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            
+        }
+        p{
+            font-family: Light 300;
+        }
+        @media screen and (max-width: 700px){
+            .container{
+                flex-direction: column-reverse;
+               
+            }
+            
+        }
+
+    </style>
+    </head>
+
+<body>
+<div class="wrapper">
+    <header><div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#cats">Cats</a>
+        <a href="#login">Login</a>
+      </div></header>
+
+    <div class="container" style="z-index: 3;">
+        <div class="box" id="left">
+            <h3>Recent posts</h3>
+        </div>  
+        <div class="box" id="right">
+            <div class="upper">
+               
+            </div>
+            <div class="lower">
+                
+                <h2>🎈 Cool Cat</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita eum, optio officia corrupti vitae aut eaque quibusdam qui ab voluptatum repellat debitis praesentium asperiores doloribus ipsum ex quae accusamus?
+                Numquam, eligendi ea! Pariatur nihil, laborum illo laboriosam eius possimus, dolorum eum placeat incidunt eligendi reiciendis odio labore, illum necessitatibus rerum facilis natus totam. Fugiat consequuntur provident iure quisquam! Rerum!
+                Veritatis ab, molestias itaque quidem nam, fuga placeat architecto quibusdam optio natus iure odit? Cupiditate tempore et odit debitis voluptatibus voluptate? Eos accusantium placeat eligendi veniam doloremque necessitatibus fugit nemo.</p>
+                </div>
+                
+        </div> 
+       
+     
+    </div>
+    <footer> <p>Footer tiedot</p> </footer>
+    </div>
+   
+    
+
+    <!-- Float continues, clearing -->
+ 
+    
+    <!-- Responsive images and centering -->  
+     
+</body>
+</html>
